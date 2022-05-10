@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Box;
+    src: url(./ios.ttf);
+}
+
+body {
+    user-select: none;
+    overflow: hidden;
+    font-family: Box;
+    font-weight: 550;
+}
+
+.container {
+    position: absolute;
+    /* background-color: aqua; */
+    width: 60vw;
+    height: 70vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+.searchbar{
+    background: white url("search.svg") no-repeat 15px center;
+    width: 58vw;
+    height: 2.5vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-size: 15px 15px;
+    padding-left: 1.9vw;
+    padding-top: .2vw;
+    outline: none;
+}
+.categories {
+    /* background-color: rgb(126, 126, 126); */
+    width: 100%;
+    height: 3.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5vw;
+}
+.cat {
+    background-color: rgb(114, 114, 221);
+    width: 12vw;
+    height: 3.5vw;
+    border-radius: .3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cat:hover{
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+.emotes {
+    /* background-color: rgb(126, 126, 126); */
+    height: 100%;
+    border-radius: .3vw;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 2%;
+    flex-wrap: wrap;
+    -ms-overflow-style: none;  
+    justify-content: flex-start;
+    overflow-y:scroll;
+    flex:1 1 auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.emote {
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 9vw;
+    height: 3.5vw;
+    border-radius: .3vw;
+    box-shadow: 0 0 .3vw rgba(0, 0, 0, 0.726);
+    
+}
+.emote:hover {
+    background-color: rgb(114, 114, 221);
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 0 .3vw rgb(114, 114, 221);
+}
+.emote-title {
+    font-size: .8vw;
+    margin: .4vw;
+    color: aliceblue;
+    font-weight: bold;
+}
+.emote-command {
+    font-size: .8vw;
+    margin: .4vw;
+    color: aliceblue;
+    margin-top: .2vw;
+    font-weight: 100;
+}
+.search-icon {
+    margin-left: .3vw;
+    font-size: 1vw;
+    color: rgb(218, 218, 218);
+}
+.search-icon:hover {
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+.icono-cat {
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+}
+::-webkit-scrollbar {
+    display: none;
+}

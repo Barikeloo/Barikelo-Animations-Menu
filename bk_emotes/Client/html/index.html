@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@18657a9/css/all.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>bk_emotes</title>
+</head>
+<body>
+    <div class="container" id="app" v-if="opened">
+        <template>
+            
+            <input type="text" class="searchbar" placeholder="Search emotes..." v-model="search">
+        </template>
+        <div class="categories">
+            <div class="cat" v-on:click="setTempList('Gestos')"><i class="fa-solid fa-face-grin icono-cat"></i></div>
+            <div class="cat" v-on:click="setTempList('Bailes')"><i class="fa-solid fa-music icono-cat"></i></div>
+            <div class="cat" v-on:click="setTempList('Objetos')"><i class="fa-solid fa-box icono-cat"></i></div>
+            <div class="cat" v-on:click="setTempList('Compartidas')"><i class="fa-solid fa-user-group icono-cat"></i></div>
+            <div class="cat" v-on:click="setTempList('Formas de caminar')"><i class="fa-solid fa-person-walking icono-cat"></i></div>
+        </div>
+        <div class="emotes">
+            <div class="emote" v-on:click="makeAnimation(anim)" v-for="anim in filteredItems" v-for="anim in tempList">
+                <div class="emote-title">{{ anim.label }}</div>
+                <div class="emote-command"><span>/e </span>{{ anim.value }}</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
